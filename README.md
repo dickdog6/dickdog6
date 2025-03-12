@@ -1,28 +1,3 @@
-#!/usr/bin/env python3
-
-# Cryptocurrency Wallet Finder
-#   Currently supports finding numerous wallet types, such as monero, bitcoin,  ethereum, doge, blockchain, metamask, electrum
-#   It will also look for possible mnemonic phrases saved in files
-#   
-#   Tested on https://github.com/3rdIteration/btcrecover using the test files located in btcrecover/test/test-wallets/ and on a real system.
-
-# Usage examples:
-#   python walletfind.py <path> > found.txt
-#   python walletfind.py . > found.txt # find in current directory
-#   python walletfind.py Data/Old > found.txt # find in Data/Old
-
-# NOTE: THIS WILL PROBABLY TAKE A LONG TIME
-#   The script will go through EVERY FILE in the specified directory to look for anything related to cryptocurrency.
-#   You can specify file types to ignore in ignore_filetypes and ignore_filenames
-
-# TODO:
-#   OCR image indexer for checking through images for mnemonics?
-
-# If this helped you, donations are highly appreciated :D
-#   XMR: 82rB82w2UUkN7ytdpV3YpnUNQgXb8hYKjf2Y2a8nKRBh3AtEZuZ4m85TAMdfK2mUaFRwEuH7FhuDF6CBUcJ6uYLg3wHWomg
-#   BTC: bc1qamerckatx6v99j40qv29cs9cynrrpzajsgx5u2
-#   ETH: 0x863691fAf1d1f5e50E9dA98C3DFbad91eE8eD96D
-
 import os, re, sys, subprocess
 from datetime import datetime
 start=datetime.now()
